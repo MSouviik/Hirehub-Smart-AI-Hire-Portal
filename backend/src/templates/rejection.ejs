@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .job-details {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .job-details h3 {
+            margin: 0 0 10px 0;
+            color: #856404;
+        }
+        .job-details p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .motivation-section {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .motivation-section h3 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+            font-size: 14px;
+        }
+        .motivation-section p {
+            margin: 5px 0;
+            font-size: 13px;
+            font-style: italic;
+            color: #555;
+        }
+        .next-steps {
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .next-steps h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .next-steps ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .next-steps li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        .footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Application Update</h1>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">
+                <p>Hi <strong><%= candidateName %></strong>,</p>
+            </div>
+
+            <p>Thank you for your interest in the <strong><%= jobTitle %></strong> position at <strong><%= companyName %></strong>.</p>
+
+            <p>After careful review of your application, we've decided to move forward with other candidates who more closely match our specific requirements at this time.</p>
+
+            <div class="job-details">
+                <h3>Position Details</h3>
+                <p><strong>Job Title:</strong> <%= jobTitle %></p>
+                <p><strong>Company:</strong> <%= companyName %></p>
+                <p><strong>Role:</strong> <%= jobRole %></p>
+            </div>
+
+            <div class="motivation-section">
+                <h3>Why You Applied:</h3>
+                <p><%= candidateMotivation %></p>
+            </div>
+
+            <p>We appreciate the time and effort you invested in applying, and we encourage you to keep an eye on our career opportunities. Your profile remains in our system, and we'd love to hear from you again for future positions that might be a better match.</p>
+
+            <div class="next-steps">
+                <h3>Keep Moving Forward 🚀</h3>
+                <ul>
+                    <li><strong>Don't get discouraged:</strong> Rejection is a normal part of the job search process.</li>
+                    <li><strong>Keep learning:</strong> Consider upskilling in areas that interest you.</li>
+                    <li><strong>Stay connected:</strong> Follow us on social media for new opportunities.</li>
+                    <li><strong>Try again:</strong> Feel free to apply for other open positions on our platform.</li>
+                </ul>
+            </div>
+
+            <p>We wish you the very best in your career journey, and we hope to work with you in the future!</p>
+
+            <p>Best regards,<br>
+            <strong><%= companyName %> - HR Team</strong></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 HireHub. All rights reserved. | This is an automated email, please do not reply.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            border: 1px solid #e0e0e0;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2563eb;
+            margin: 0;
+            font-size: 28px;
+        }
+        .content {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .greeting {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .otp-box {
+            background-color: #2563eb;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            font-family: 'Courier New', monospace;
+        }
+        .timer {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .instructions {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            text-align: left;
+            font-size: 14px;
+            color: #1565c0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 13px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 HireHub Verification</h1>
+        </div>
+        
+        <div class="content">
+            <p class="greeting">Hello <%= fullName || 'User' %>,</p>
+            
+            <p>Thank you for signing up for HireHub! To complete your profile creation, please verify your email address using the OTP below:</p>
+            
+            <div class="otp-box">
+                <%= otp %>
+            </div>
+            
+            <div class="timer">
+                ⏱️ This OTP expires in 100 seconds
+            </div>
+            
+            <div class="instructions">
+                <strong>📋 Instructions:</strong>
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                    <li>Enter this OTP in the verification dialog on your screen</li>
+                    <li>Do not share this OTP with anyone</li>
+                    <li>If you didn't request this, please ignore this email</li>
+                    <li>If the OTP expires, you can request a new one</li>
+                </ul>
+            </div>
+            
+            <div class="warning">
+                ⚠️ <strong>Security Notice:</strong> Never share your OTP with anyone, including HireHub support staff. We will never ask for your OTP.
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Best regards,<br>The HireHub Team</p>
+            <p style="margin-top: 15px; color: #bbb;">© 2025 HireHub. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
